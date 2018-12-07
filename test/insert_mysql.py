@@ -9,7 +9,7 @@ class Insert(object):
                         (aid, view, danmaku, reply, favorite, coin, share) 
                         values(%s, %s, %s, %s, %s, %s, %s)"""
 
-    def run(self,video_list):
+    def run(self, video_list):
         # 使用cursor()方法获取操作游标
         cursor = self.db.cursor()
         for row in video_list:
@@ -17,4 +17,6 @@ class Insert(object):
                 cursor.execute(self.sql, row)
             except:
                 self.db.rollback()
+            else:
+                self.db.commit()
         self.db.close()
