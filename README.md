@@ -7,21 +7,12 @@ Bilibili爬虫
  
  2.get_ip.py  爬取代理ip，给main.py调用
  
-<<<<<<< HEAD
- 3.test文件夹:    # 这部分文件没有参与我的爬虫，只提供参考    
-=======
  3.test文件夹:    # 这部分文件没有参与我的爬虫，只是测试使用    
->>>>>>> update
- 
+
         creat_mysql..py 创建表格，字段
         Download.py  爬虫
         insert_mysql.py  数据插入mysql       
-<<<<<<< HEAD
-        test.cav  爬取到的一部分数据
-=======
         test.cav  测试过程爬取到的一部分数据
->>>>>>> update
- 
  
  
 -------------------------------------------- 
