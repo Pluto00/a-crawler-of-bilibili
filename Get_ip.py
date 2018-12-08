@@ -30,6 +30,7 @@ class IpPool(object):
             else:
                 # 把可以用的ip放进列表
                 self.ip_list.append(tds[1].text + ':' + tds[2].text)
+
         for ip in self.ip_list:  # 把ip设置为字典，方便调用
             proxies = {
                 'https': "https://" + ip
