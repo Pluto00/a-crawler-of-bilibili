@@ -10,7 +10,7 @@ class Insert(object):
                         values(%s, %s, %s, %s, %s, %s, %s)"""
 
     def run(self, video_list):
-        # 使用cursor()方法获取操作游标
+        #  使用cursor()方法获取操作游标
         cursor = self.db.cursor()
         for row in video_list:
             try:
