@@ -24,8 +24,8 @@ class GetInfo(object):  # 定义一个爬取类
         self.db = pymysql.connect("localhost", "root", "", "bilibili", charset='utf8')  # 连接数据库
         self.cursor = self.db.cursor()  # 获得操作游标
         self.sql = """insert into video  
-                    (aid, view, danmaku, reply, favorite, coin, share)
-                    values(%s, %s, %s, %s, %s, %s, %s)"""  # mysql插入语句
+                    (aid, view, danmaku, reply, favorite, coin, share, awesome)
+                    values(%s, %s, %s, %s, %s, %s, %s, %s)"""  # mysql插入语句
 
     def download(self, start, end):
         for video_id in range(start, end):
@@ -37,7 +37,8 @@ class GetInfo(object):  # 定义一个爬取类
                 data = response['data']
                 video_info = (
                     data['aid'], data['view'], data['danmaku'],
-                    data['reply'], data['favorite'], data['coin'], data['share'])
+                    data['reply'], data['favorite'], data['coin'],
+                    data['share'], data['like'])
                 video_list.append(video_info)
             except:
                 pass

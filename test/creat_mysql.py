@@ -13,7 +13,8 @@ class Creat(object):
                      reply VARCHAR(11),
                      favorite VARCHAR(11),
                      coin VARCHAR(11),
-                     share VARCHAR(11) )"""
+                     share VARCHAR(11),
+                     awesome VARCHAR(11)  )"""  # like是关键字，会报错，换成了awesome表示赞
 
     def run(self):
         # 使用cursor()方法获取操作游标
@@ -23,6 +24,3 @@ class Creat(object):
         cursor.execute(self.sql)
         self.db.close()
 
-
-t = Creat()
-t.run()
