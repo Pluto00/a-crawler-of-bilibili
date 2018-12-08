@@ -44,8 +44,10 @@ Bilibili爬虫
 
 2.开始写一个简单爬虫：
     
-    由第一步的分析，我们可以确定这个zpi地址的请求方法为get,内容用json来进行解析;
-    代码:response = requests.get("https://api.bilibili.com/x/web-interface/archive/stat?aid=2").json()
+    由第一步的分析，我们可以确定这个api地址的请求方法为get,内容用json来进行解析;
+    代码:
+            response = requests.get("https://api.bilibili.com/x/web-interface/archive/stat?aid=2").json()
+    
     这样子我们就把视频的信息抓了下来，接下来就是对信息进行提取；
     我们看一下响应的内容，用json解析工具可以得到：
     
